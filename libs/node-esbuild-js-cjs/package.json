@@ -28,7 +28,7 @@
 		"publint": "publint ."
 	},
 	"devDependencies": {
-		"esbuild": "0.19.11",
-		"typescript": "^5.3.3"
+		"esbuild": "^0.24.2",
+		"typescript": "^5.7.3"
 	}
 }

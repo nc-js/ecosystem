@@ -28,8 +28,8 @@
 		"publint": "publint ."
 	},
 	"devDependencies": {
-		"@rollup/plugin-commonjs": "^25.0.7",
-		"@rollup/plugin-node-resolve": "^15.2.3",
-		"rollup": "^4.9.5"
+		"@rollup/plugin-commonjs": "^28.0.2",
+		"@rollup/plugin-node-resolve": "^16.0.0",
+		"rollup": "^4.31.0"
 	}
 }
