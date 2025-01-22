@@ -27,9 +27,9 @@
 		"publint": "publint ."
 	},
 	"devDependencies": {
-		"rollup": "^4.9.5",
-		"rollup-plugin-dts": "^6.1.0",
-		"tslib": "^2.6.2",
-		"typescript": "^5.3.3"
+		"rollup": "^4.31.0",
+		"rollup-plugin-dts": "^6.1.1",
+		"tslib": "^2.8.1",
+		"typescript": "^5.7.3"
 	}
 }
