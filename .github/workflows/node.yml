@@ -24,7 +24,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Install Node.js (latest)
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: latest
           cache: 'npm'
@@ -62,7 +62,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Install Node.js (latest)
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: latest
           cache: 'npm'
