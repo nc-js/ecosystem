@@ -16,10 +16,14 @@
 		"inspect": "node-modules-inspector"
 	},
 	"devDependencies": {
+		"@parcel/config-default": "catalog:bundler",
+		"@parcel/packager-ts": "catalog:bundler",
+		"@parcel/transformer-typescript-types": "catalog:bundler",
 		"node-modules-inspector": "catalog:",
 		"oxfmt": "catalog:voidzero",
 		"oxlint": "catalog:voidzero",
 		"oxlint-tsgolint": "catalog:voidzero",
-		"publint": "catalog:"
+		"publint": "catalog:",
+		"typescript": "catalog:bundler"
 	}
 }

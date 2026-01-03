@@ -6,6 +6,9 @@ settings:
 
 catalogs:
   bundler:
+    '@parcel/config-default':
+      specifier: ^2.16.3
+      version: 2.16.3
     '@parcel/packager-ts':
       specifier: ^2.13.3
       version: 2.16.3
@@ -82,6 +85,15 @@ importers:
 
   .:
     devDependencies:
+      '@parcel/config-default':
+        specifier: catalog:bundler
+        version: 2.16.3(@parcel/core@2.16.3(@swc/helpers@0.5.18))(@swc/helpers@0.5.18)
+      '@parcel/packager-ts':
+        specifier: catalog:bundler
+        version: 2.16.3(@parcel/core@2.16.3(@swc/helpers@0.5.18))
+      '@parcel/transformer-typescript-types':
+        specifier: catalog:bundler
+        version: 2.16.3(@parcel/core@2.16.3(@swc/helpers@0.5.18))(typescript@5.9.3)
       node-modules-inspector:
         specifier: 'catalog:'
         version: 1.2.0
@@ -97,6 +109,9 @@ importers:
       publint:
         specifier: 'catalog:'
         version: 0.3.16
+      typescript:
+        specifier: catalog:bundler
+        version: 5.9.3
 
   libs/node-esbuild-js-cjs:
     devDependencies:
