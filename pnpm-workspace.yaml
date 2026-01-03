@@ -1,0 +1,39 @@
+packages:
+  - libs/*
+
+catalog:
+  '@types/node': ^22.10.7
+  node-modules-inspector: ^1.2.0
+  publint: ^0.3.16
+
+catalogs:
+  bundler:
+    '@parcel/config-default': ^2.16.3
+    '@parcel/packager-ts': ^2.13.3
+    '@parcel/transformer-typescript-types': ^2.13.3
+    '@rollup/plugin-commonjs': ^28.0.2
+    '@rollup/plugin-node-resolve': ^16.0.0
+    '@rollup/plugin-typescript': ^12.1.2
+    esbuild: ^0.24.2
+    parcel: ^2.13.3
+    rollup: 4.31.0
+    rollup-plugin-dts: ^6.1.1
+    ts-loader: ^9.5.2
+    tslib: ^2.8.1
+    tsup: ^8.3.5
+    typescript: ^5.7.3
+    vite: ^6.0.11
+    vite-plugin-dts: ^4.5.0
+    webpack: ^5.97.1
+    webpack-cli: ^6.0.1
+  voidzero:
+    oxfmt: ^0.21.0
+    oxlint: ^1.36.0
+    oxlint-tsgolint: ^0.10.1
+
+onlyBuiltDependencies:
+  - '@parcel/watcher'
+  - '@swc/core'
+  - esbuild
+  - lmdb
+  - msgpackr-extract

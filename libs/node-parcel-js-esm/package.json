@@ -1,39 +1,39 @@
 {
-	"private": true,
-	"version": "1.0.0",
 	"name": "node-parcel-js-esm",
+	"version": "1.0.0",
+	"private": true,
 	"description": "Node, JavaScript (ESM), Parcel",
 	"keywords": [
-		"node",
-		"javascript",
 		"esm",
+		"javascript",
+		"node",
 		"parcel"
 	],
-	"type": "module",
-	"types": "dist/index.d.ts",
 	"source": "src/index.js",
+	"files": [
+		"dist"
+	],
+	"type": "module",
 	"module": "dist/module.js",
-	"targets": {
-		"types": false
-	},
+	"types": "dist/index.d.ts",
 	"exports": {
 		".": {
 			"types": "./dist/index.d.ts",
 			"import": "./dist/module.js"
 		}
 	},
-	"files": [
-		"dist"
-	],
 	"scripts": {
-		"build": "parcel build --cache-dir ./.parcel-cache && npm run dts",
-		"dev": "parcel watch --cache-dir ./.parcel-cache && npm run dts",
+		"build": "parcel build --cache-dir ./.parcel-cache && pnpm run dts",
+		"dev": "parcel watch --cache-dir ./.parcel-cache && pnpm run dts",
 		"dts": "tsc",
-		"prepublint": "npm run build",
+		"prepublint": "pnpm run build",
 		"publint": "publint ."
 	},
 	"devDependencies": {
-		"parcel": "^2.13.3",
-		"typescript": "^5.7.3"
+		"parcel": "catalog:bundler",
+		"typescript": "catalog:bundler"
+	},
+	"targets": {
+		"types": false
 	}
 }

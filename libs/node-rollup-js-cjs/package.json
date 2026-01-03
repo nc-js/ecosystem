@@ -1,35 +1,35 @@
 {
-	"private": true,
-	"version": "1.0.0",
 	"name": "node-rollup-js-cjs",
+	"version": "1.0.0",
+	"private": true,
 	"description": "Node, JavaScript (CommonJS), Rollup",
 	"keywords": [
-		"node",
-		"javascript",
 		"commonjs",
+		"javascript",
+		"node",
 		"rollup"
 	],
+	"files": [
+		"dist"
+	],
 	"type": "commonjs",
-	"types": "./dist/index.d.ts",
 	"main": "./dist/index.js",
+	"types": "./dist/index.d.ts",
 	"exports": {
 		".": {
 			"types": "./dist/index.d.ts",
 			"import": "./dist/index.js"
 		}
 	},
-	"files": [
-		"dist"
-	],
 	"scripts": {
 		"build": "rollup --config rollup.config.js",
-		"dev": "npm run build -- -w",
-		"prepublint": "npm run build",
+		"dev": "pnpm run build -- -w",
+		"prepublint": "pnpm run build",
 		"publint": "publint ."
 	},
 	"devDependencies": {
-		"@rollup/plugin-commonjs": "^28.0.2",
-		"@rollup/plugin-node-resolve": "^16.0.0",
-		"rollup": "^4.31.0"
+		"@rollup/plugin-commonjs": "catalog:bundler",
+		"@rollup/plugin-node-resolve": "catalog:bundler",
+		"rollup": "catalog:bundler"
 	}
 }

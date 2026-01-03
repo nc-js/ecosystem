@@ -1,13 +1,16 @@
 {
-	"private": true,
-	"version": "1.0.0",
 	"name": "node-esbuild-ts-esm",
+	"version": "1.0.0",
+	"private": true,
 	"description": "Node, TypeScript (ESM), esbuild",
 	"keywords": [
-		"node",
-		"typescript",
+		"esbuild",
 		"esm",
-		"esbuild"
+		"node",
+		"typescript"
+	],
+	"files": [
+		"dist"
 	],
 	"type": "module",
 	"types": "./dist/index.d.ts",
@@ -17,17 +20,14 @@
 			"import": "./dist/index.js"
 		}
 	},
-	"files": [
-		"dist"
-	],
 	"scripts": {
-		"build": "npm run dts && node build.js",
+		"build": "pnpm run dts && node build.js",
 		"dts": "tsc",
-		"prepublint": "npm run build",
+		"prepublint": "pnpm run build",
 		"publint": "publint ."
 	},
 	"devDependencies": {
-		"esbuild": "^0.24.2",
-		"typescript": "^5.7.3"
+		"esbuild": "catalog:bundler",
+		"typescript": "catalog:bundler"
 	}
 }

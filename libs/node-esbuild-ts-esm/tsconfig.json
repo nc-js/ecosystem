@@ -30,20 +30,15 @@
 		/* transpilation */
 		"rootDir": "./src",
 		"outDir": "./dist",
-		"lib": [ "ES2022" ],
+		"lib": ["ES2022"],
 		"target": "ES2022",
 		"module": "ESNext",
 		"moduleResolution": "Bundler",
 		"isolatedModules": true,
-		"baseUrl": "./src",
 		"sourceMap": true,
 		"emitDeclarationOnly": true,
 		"declaration": true
 	},
-	"include": [
-		"src"
-	],
-	"exclude": [
-		"build.js"
-	]
+	"include": ["src"],
+	"exclude": ["build.js"]
 }

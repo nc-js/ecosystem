@@ -1,13 +1,16 @@
 {
-	"private": true,
-	"version": "1.0.0",
 	"name": "node-tsup-ts-esm",
+	"version": "1.0.0",
+	"private": true,
 	"description": "Node, TypeScript (ESM), tsup",
 	"keywords": [
-		"node",
-		"typescript",
 		"esm",
-		"tsup"
+		"node",
+		"tsup",
+		"typescript"
+	],
+	"files": [
+		"dist"
 	],
 	"type": "module",
 	"types": "dist/index.d.ts",
@@ -17,16 +20,13 @@
 			"require": "./dist/index.js"
 		}
 	},
-	"files": [
-		"dist"
-	],
 	"scripts": {
 		"build": "tsup src/index.ts --format esm --dts --minify",
-		"prepublint": "npm run build",
+		"prepublint": "pnpm run build",
 		"publint": "publint ."
 	},
 	"devDependencies": {
-		"tsup": "^8.3.5",
-		"typescript": "^5.7.3"
+		"tsup": "catalog:bundler",
+		"typescript": "catalog:bundler"
 	}
 }

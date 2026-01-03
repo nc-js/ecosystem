@@ -1,39 +1,39 @@
 {
-	"private": true,
-	"version": "1.0.0",
 	"name": "node-parcel-js-cjs",
+	"version": "1.0.0",
+	"private": true,
 	"description": "Node, JavaScript (CommonJS), Parcel",
 	"keywords": [
-		"node",
-		"javascript",
 		"commonjs",
+		"javascript",
+		"node",
 		"parcel"
 	],
-	"type": "commonjs",
 	"source": "src/index.js",
-	"types": "dist/index.d.ts",
+	"files": [
+		"dist"
+	],
+	"type": "commonjs",
 	"main": "dist/index.js",
-	"targets": {
-		"types": false
-	},
+	"types": "dist/index.d.ts",
 	"exports": {
 		".": {
 			"types": "./dist/index.d.ts",
 			"require": "./dist/index.js"
 		}
 	},
-	"files": [
-		"dist"
-	],
 	"scripts": {
-		"build": "parcel build --cache-dir ./.parcel-cache && npm run dts",
-		"dev": "parcel watch --cache-dir ./.parcel-cache && npm run dts",
+		"build": "parcel build --cache-dir ./.parcel-cache && pnpm run dts",
+		"dev": "parcel watch --cache-dir ./.parcel-cache && pnpm run dts",
 		"dts": "tsc",
-		"prepublint": "npm run build",
+		"prepublint": "pnpm run build",
 		"publint": "publint ."
 	},
 	"devDependencies": {
-		"parcel": "^2.13.3",
-		"typescript": "^5.7.3"
+		"parcel": "catalog:bundler",
+		"typescript": "catalog:bundler"
+	},
+	"targets": {
+		"types": false
 	}
 }

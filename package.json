@@ -1,23 +1,29 @@
 {
 	"name": "@neoncitylights/ecosystem",
+	"version": "0.0.0",
 	"private": true,
-	"type": "module",
 	"workspaces": [
 		"libs/*"
 	],
+	"type": "module",
 	"scripts": {
-		"build": "npm run build -ws --if-present",
-		"clean": "rm -rf ./node_modules && rm -rf ./package-lock.json",
-		"lint": "eslint .",
-		"lint:fix": "npm run lint -- --fix",
-		"publint": "npm run publint -ws --if-present"
+		"build": "pnpm run --r --if-present build",
+		"fmt": "oxfmt",
+		"fmt-ci": "oxfmt --check",
+		"lint": "oxlint --type-aware --type-check",
+		"fix": "oxlint --fix",
+		"publint": "pnpm run --r --if-present publint",
+		"inspect": "node-modules-inspector"
 	},
 	"devDependencies": {
-		"@eslint/js": "^9.18.0",
-		"@stylistic/eslint-plugin": "^2.13.0",
-		"eslint": "^9.18.0",
-		"globals": "^15.14.0",
-		"publint": "^0.3.2",
-		"typescript-eslint": "^8.21.0"
+		"@parcel/config-default": "catalog:bundler",
+		"@parcel/packager-ts": "catalog:bundler",
+		"@parcel/transformer-typescript-types": "catalog:bundler",
+		"node-modules-inspector": "catalog:",
+		"oxfmt": "catalog:voidzero",
+		"oxlint": "catalog:voidzero",
+		"oxlint-tsgolint": "catalog:voidzero",
+		"publint": "catalog:",
+		"typescript": "catalog:bundler"
 	}
 }
