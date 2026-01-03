@@ -1,35 +1,35 @@
 {
-	"private": true,
-	"version": "1.0.0",
 	"name": "node-webpack-js-cjs",
+	"version": "1.0.0",
+	"private": true,
 	"description": "Node, JavaScript (CommonJS), Webpack",
 	"keywords": [
-		"node",
-		"javascript",
 		"commonjs",
+		"javascript",
+		"node",
 		"webpack"
 	],
+	"files": [
+		"dist"
+	],
 	"type": "commonjs",
-	"types": "./dist/index.d.ts",
 	"main": "./dist/bundle.js",
+	"types": "./dist/index.d.ts",
 	"exports": {
 		".": {
 			"types": "./dist/index.d.ts",
 			"require": "./dist/bundle.js"
 		}
 	},
-	"files": [
-		"dist"
-	],
 	"scripts": {
-		"build": "webpack build --mode=production && npm run dts",
+		"build": "webpack build --mode=production && pnpm run dts",
 		"dts": "tsc",
-		"prepublint": "npm run build",
+		"prepublint": "pnpm run build",
 		"publint": "publint ."
 	},
 	"devDependencies": {
-		"typescript": "^5.7.3",
-		"webpack": "^5.97.1",
-		"webpack-cli": "^6.0.1"
+		"typescript": "catalog:bundler",
+		"webpack": "catalog:bundler",
+		"webpack-cli": "catalog:bundler"
 	}
 }

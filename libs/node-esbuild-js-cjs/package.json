@@ -1,34 +1,34 @@
 {
-	"private": true,
-	"version": "1.0.0",
 	"name": "node-esbuild-js-cjs",
+	"version": "1.0.0",
+	"private": true,
 	"description": "Node, JavaScript (CommonJS), esbuild",
 	"keywords": [
-		"node",
-		"javascript",
 		"commonjs",
-		"esbuild"
+		"esbuild",
+		"javascript",
+		"node"
+	],
+	"files": [
+		"dist"
 	],
 	"type": "commonjs",
 	"types": "./dist/index.d.ts",
-	"require": "./dist/index.js",
 	"exports": {
 		".": {
 			"types": "./dist/index.d.ts",
 			"require": "./dist/index.js"
 		}
 	},
-	"files": [
-		"dist"
-	],
 	"scripts": {
-		"build": "npm run dts && node build.js",
+		"build": "pnpm run dts && node build.js",
 		"dts": "tsc",
-		"prepublint": "npm run build",
+		"prepublint": "pnpm run build",
 		"publint": "publint ."
 	},
 	"devDependencies": {
-		"esbuild": "^0.24.2",
-		"typescript": "^5.7.3"
-	}
+		"esbuild": "catalog:bundler",
+		"typescript": "catalog:bundler"
+	},
+	"require": "./dist/index.js"
 }

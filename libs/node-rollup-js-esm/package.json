@@ -1,13 +1,16 @@
 {
-	"private": true,
-	"version": "1.0.0",
 	"name": "node-rollup-js-esm",
+	"version": "1.0.0",
+	"private": true,
 	"description": "Node, JavaScript (ESM), Rollup",
 	"keywords": [
-		"node",
-		"javascript",
 		"esm",
+		"javascript",
+		"node",
 		"rollup"
+	],
+	"files": [
+		"dist"
 	],
 	"type": "module",
 	"types": "./dist/index.d.ts",
@@ -17,19 +20,16 @@
 			"import": "./dist/index.js"
 		}
 	},
-	"files": [
-		"dist"
-	],
 	"scripts": {
 		"build": "rollup --config rollup.config.js",
-		"dev": "npm run build -- -w",
-		"prepublint": "npm run build",
+		"dev": "pnpm run build -- -w",
+		"prepublint": "pnpm run build",
 		"publint": "publint ."
 	},
 	"devDependencies": {
-		"rollup": "^4.31.0",
-		"rollup-plugin-dts": "^6.1.1",
-		"tslib": "^2.8.1",
-		"typescript": "^5.7.3"
+		"rollup": "catalog:bundler",
+		"rollup-plugin-dts": "catalog:bundler",
+		"tslib": "catalog:bundler",
+		"typescript": "catalog:bundler"
 	}
 }

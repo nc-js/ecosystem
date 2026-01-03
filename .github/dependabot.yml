@@ -5,18 +5,18 @@
 
 version: 2
 updates:
-  - package-ecosystem: "devcontainers"
-    directory: "/"
+  - package-ecosystem: 'devcontainers'
+    directory: '/'
     schedule:
       interval: weekly
     commit-message:
-      prefix: "chore(deps/devcon):"
+      prefix: 'chore(deps/devcon):'
     open-pull-requests-limit: 4
 
-  - package-ecosystem: "github-actions"
-    directory: "/"
+  - package-ecosystem: 'github-actions'
+    directory: '/'
     schedule:
       interval: daily
     commit-message:
-      prefix: "chore(deps/actions):"
+      prefix: 'chore(deps/actions):'
     open-pull-requests-limit: 4

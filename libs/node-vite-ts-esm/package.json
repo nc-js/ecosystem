@@ -1,13 +1,16 @@
 {
-	"private": true,
-	"version": "1.0.0",
 	"name": "node-vite-ts-esm",
+	"version": "1.0.0",
+	"private": true,
 	"description": "Node, TypeScript (ESM), Vite",
 	"keywords": [
+		"esm",
 		"node",
 		"typescript",
-		"esm",
 		"vite"
+	],
+	"files": [
+		"dist"
 	],
 	"type": "module",
 	"types": "./dist/index.d.ts",
@@ -17,18 +20,15 @@
 			"import": "./dist/index.mjs"
 		}
 	},
-	"files": [
-		"dist"
-	],
 	"scripts": {
 		"build": "vite build",
-		"prepublint": "npm run build",
+		"prepublint": "pnpm run build",
 		"publint": "publint ."
 	},
 	"devDependencies": {
-		"@types/node": "^22.10.7",
-		"typescript": "^5.7.3",
-		"vite": "^6.0.11",
-		"vite-plugin-dts": "^4.5.0"
+		"@types/node": "catalog:",
+		"typescript": "catalog:bundler",
+		"vite": "catalog:bundler",
+		"vite-plugin-dts": "catalog:bundler"
 	}
 }

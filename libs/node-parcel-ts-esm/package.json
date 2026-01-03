@@ -1,37 +1,37 @@
 {
-	"private": true,
-	"version": "1.0.0",
 	"name": "node-parcel-ts-esm",
+	"version": "1.0.0",
+	"private": true,
 	"description": "Node, TypeScript (ESM), Parcel",
 	"keywords": [
-		"node",
-		"typescript",
 		"esm",
-		"parcel"
+		"node",
+		"parcel",
+		"typescript"
+	],
+	"source": "./src/index.ts",
+	"files": [
+		"dist"
 	],
 	"type": "module",
-	"source": "./src/index.ts",
-	"types": "./dist/types.d.ts",
 	"module": "./dist/module.js",
+	"types": "./dist/types.d.ts",
 	"exports": {
 		".": {
 			"types": "./dist/types.d.ts",
 			"import": "./dist/module.js"
 		}
 	},
-	"files": [
-		"dist"
-	],
 	"scripts": {
 		"build": "parcel build --cache-dir ./.parcel-cache",
 		"dev": "parcel watch --cache-dir ./.parcel-cache",
-		"prepublint": "npm run build",
+		"prepublint": "pnpm run build",
 		"publint": "publint ."
 	},
 	"devDependencies": {
-		"@parcel/packager-ts": "^2.13.3",
-		"@parcel/transformer-typescript-types": "^2.13.3",
-		"parcel": "^2.13.3",
-		"typescript": "^5.7.3"
+		"@parcel/packager-ts": "catalog:bundler",
+		"@parcel/transformer-typescript-types": "catalog:bundler",
+		"parcel": "catalog:bundler",
+		"typescript": "catalog:bundler"
 	}
 }

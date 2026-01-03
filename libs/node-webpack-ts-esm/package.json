@@ -1,34 +1,34 @@
 {
-	"private": true,
-	"version": "1.0.0",
 	"name": "node-webpack-ts-esm",
+	"version": "1.0.0",
+	"private": true,
 	"description": "Node, TypeScript (ESM), Webpack",
 	"keywords": [
+		"esm",
 		"node",
 		"typescript",
-		"esm",
 		"webpack"
+	],
+	"files": [
+		"dist"
 	],
 	"type": "module",
 	"types": "./dist/index.d.ts",
 	"exports": {
 		".": {
-		"types": "./dist/index.d.ts",
-		"require": "./dist/index.js"
+			"types": "./dist/index.d.ts",
+			"require": "./dist/index.js"
 		}
 	},
-	"files": [
-		"dist"
-	],
 	"scripts": {
 		"build": "webpack --mode=production",
-		"prepublint": "npm run build",
+		"prepublint": "pnpm run build",
 		"publint": "publint ."
 	},
 	"devDependencies": {
-		"ts-loader": "^9.5.2",
-		"typescript": "^5.7.3",
-		"webpack": "^5.97.1",
-		"webpack-cli": "^6.0.1"
+		"ts-loader": "catalog:bundler",
+		"typescript": "catalog:bundler",
+		"webpack": "catalog:bundler",
+		"webpack-cli": "catalog:bundler"
 	}
 }
